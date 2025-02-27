@@ -12,3 +12,10 @@ Route::get('apple/{name}', [AppleSpecController::class, 'show']);
 // Samsung Routes
 Route::get('samsung_list', [SamsungSpecController::class, 'index']); 
 Route::get('samsung/{name}', [SamsungSpecController::class, 'show']); 
+
+
+use App\Http\Controllers\NewsArticleController;
+
+Route::post('add_news', [NewsArticleController::class, 'store']);
+
+Route::get('/news', [NewsArticleController::class, 'index']);
